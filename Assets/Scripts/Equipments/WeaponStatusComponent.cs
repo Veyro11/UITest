@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq.Expressions;
 using UnityEngine;
 
-class CharacterStatusComponent : MonoBehaviour
+public class WeaponStatusComponent : MonoBehaviour
 {
     [SerializeField] private Dictionary<StatType, Status> statuses;
     [SerializeField] private string name;
