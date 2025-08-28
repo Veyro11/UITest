@@ -1,9 +1,33 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq.Expressions;
 using UnityEngine;
 
 class CharacterStatusComponent : MonoBehaviour
 {
-    public List<Status> statuses = new List<Status>();
+    [SerializeField] private Dictionary<StatType, Status> statuses;
     
+    public void SetStatus(StatType type, Status status)
+    {
+        if (statuses.ContainsKey(type))
+        {
+            statuses[type] = status;
+        }
+        else
+        {
+            statuses.Add(type, status);
+        }
+    }
+
+    public Status GetStatus(StatType type)
+    {
+        if (statuses.ContainsKey(type))
+        {
+            return statuses[type];
+        }
+        else
+        {
+            return null;
+        }
+    }
 }
