@@ -3,8 +3,13 @@ using UnityEngine;
 public enum StatType
 {
     None,
+    Level,
+    Exp,
+    NextExp,
     HP,
+    MAXHP,
     MP,
+    MAXMP,
     ATK,
     DEF,
     STR,
@@ -24,10 +29,10 @@ public enum ControllerType
 public class Status : ScriptableObject
 {
     public StatType type;
-    public ControllerType controller;
+    public ControllerType? controller;
     public int Basic;
-    public int? Add1;
-    public int? Add2;
+    public int Add1;
+    public int Add2;
 }
 
 [CreateAssetMenu(fileName = "NewStatComponent", menuName = "Equipment Definition")]
@@ -51,3 +56,4 @@ public class EquipmentStatus : ScriptableObject
     public string SubName;
     public string Description;
 }
+

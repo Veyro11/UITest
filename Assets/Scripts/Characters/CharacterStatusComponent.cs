@@ -1,12 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq.Expressions;
+using System.Runtime.InteropServices.WindowsRuntime;
 using UnityEngine;
 
 class CharacterStatusComponent : MonoBehaviour
 {
     [SerializeField] private Dictionary<StatType, Status> statuses;
-    [SerializeField] private string name;
+    public string name;
+    public string description;
+    public int curHP;
+    public int curMP;
 
     public void SetStatus(StatType type, Status status)
     {

@@ -6,16 +6,24 @@ using UnityEngine.UI;
 public class Inventory : SingletonMono<Inventory>
 {
     // Inventory system implementation goes here.
-    public static List<EquipmentStatus> Weapons;
+    public static List<Slot> Weapons;
     public int MaxInventorySize = 21;
     public int curInventorySize = 0;
+    public GameObject SlotPrefab;
 
-    public void AddInventory(EquipmentStatus Weapon)
+    public Transform EquippedDirectory;
+
+    public void AddInventory(Slot Weapon)
     {
         if (Weapon != null && Weapons != null)
         {
-            if(curInventorySize < MaxInventorySize)
+            if (curInventorySize < MaxInventorySize)
+            {
+                curInventorySize++;
                 Weapons.Add(Weapon);
+                GameObject slot = Instantiate(SlotPrefab, transform);
+                slot.GetComponentInChildren<Image>().sprite = Weapon.Equipment.SpriteImage;
+            }
             else
                 Debug.Log("Inventory Full");
         }
@@ -26,17 +34,19 @@ public class Inventory : SingletonMono<Inventory>
         if (Weapons != null && index >= 0 && index < Weapons.Count)
         {
             Weapons.RemoveAt(index);
+            curInventorySize--;
+            Destroy(transform.GetChild(1).GetChild(0).GetChild(0).GetChild(index));
         }
     }
 
-    public void UpdateInventory()
+    public void ChangeEquipStatus(int index)
     {
-        if (Weapons == null) return;
-        for(int i=0; i < Weapons.Count; i++)
+        if (index >= curInventorySize)
         {
-            Image icon = transform.GetChild(i).GetChild(0).GetChild(0).GetComponent<Image>();
-            if (icon != null)
-                icon.sprite = Weapons[i].SpriteImage;
+            return;
         }
+        EquippedDirectory.GetChild(0).GetChild(0).gameObject.SetActive(false);
+        EquippedDirectory = transform.GetChild(1).GetChild(0).GetChild(0).GetChild(index);
+        EquippedDirectory.GetChild(0).GetChild(0).gameObject.SetActive(true);
     }
 }

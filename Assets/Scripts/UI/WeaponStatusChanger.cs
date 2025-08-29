@@ -9,12 +9,12 @@ public class WeaponStatusChanger: MonoBehaviour
     {
         if (Inventory.Weapons != null)
             if (Inventory.Weapons.Count > 0)
-                Equipment = Inventory.Weapons[0];
+                Equipment = Inventory.Weapons[0].Equipment;
     }
 
-    public void ChangeStatus(EquipmentStatus newStatus)
+    public void UpdateEquipment()
     {
-        Equipment = newStatus;
+        Equipment = Inventory.Instance.EquippedDirectory.GetComponent<Slot>().Equipment;
     }
 
     public void WriteStatus()

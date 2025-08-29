@@ -23,18 +23,18 @@ public class TextEditor : SingletonMono<TextEditor>
         // hexacode: <color=#F9C2FF>+8</color> : add2
         if (Text != null && status != null)
         {
-            if (status.Add1.HasValue && status.Add2.HasValue)
+            if (status.Add1 != 0 && status.Add2 != 0)
             {
                 Text.text = $"{status.Basic}" +
                     $"{((status.Add1 < 0) ? ("<color=#BB2F50>-" + status.Add1 + "</color>") : ("<color=#7effd3>" + status.Add1 + "</color>"))}" +
                 $" {((status.Add2 < 0) ? ("<color=#BB2F50>-" + status.Add2 + "</color>") : ("<color=#F9C2FF>" + status.Add2 + "</color>)"))}";
             }
-            else if (status.Add1.HasValue)
+            else if (status.Add1 != 0)
             {
                 Text.text = $"{status.Basic}" +
                     $"{((status.Add1 < 0) ? ("<color=#BB2F50>-" + status.Add1 + "</color>") : ("<color=#7effd3>" + status.Add1 + "</color>"))}";
             }
-            else if (status.Add2.HasValue)
+            else if (status.Add2 != 0)
             {
                 Text.text = $"{status.Basic}" +
                     $" {((status.Add2 < 0) ? ("<color=#BB2F50>-" + status.Add2 + "</color>") : ("<color=#F9C2FF>" + status.Add2 + "</color>)"))}";
@@ -46,19 +46,11 @@ public class TextEditor : SingletonMono<TextEditor>
         }
     }
 
-    public void ChangeText(TextMeshPro Text, String text)
+    public void ChangeText(TextMeshPro Text, string text)
     {
         if (Text != null)
         {
             Text.text = text;
-        }
-    }
-
-    public void ChangeLevelText(TextMeshPro Text, string name, int Level, int spacing)
-        {
-        if (Text != null)
-        {
-            Text.text = $"{name}\n<size={spacing}> </size>\nLv {Level}/50";
         }
     }
     public void ChangeSlashText(TextMeshPro Text, int cur, int max, bool middlewhite = false)

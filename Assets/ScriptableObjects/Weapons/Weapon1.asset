@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: Weapon1
+  m_EditorClassIdentifier: Assembly-CSharp::EquipmentStatus
+  ATK: {fileID: 11400000, guid: 55cb33a923d5ad1478a5f7fefa2f4fa8, type: 2}
+  DEF: {fileID: 11400000, guid: c86cb696dec8c13429759f6717d408e8, type: 2}
+  STR: {fileID: 11400000, guid: fe727c5d4f43e794bb15e9d87a54c9cd, type: 2}
+  INT: {fileID: 11400000, guid: 6181d21fdc3879944829c28583c85957, type: 2}
+  LUK: {fileID: 11400000, guid: 2b9ccd79c33bead47be87e8f750162c5, type: 2}
+  CRIT: {fileID: 11400000, guid: 01bebca456d8c56409cf9c6f38f263bb, type: 2}
+  SpriteImage: {fileID: 21300000, guid: 000d6984cc8983d41b6701e876a5dcc9, type: 3}
+  EquipmentName: "\uACE0\uC694\uD788 \uC0D8\uC19F\uB294 \uBE5B"
+  SubName: "\uD55C\uC190\uAC80"
+  Description: "\uAC00\uC7A5 \uB192\uC740 \uAD8C\uC704\uB97C \uC0C1\uC9D5\uD558\uB358
+    \uC9C0\uD321\uC774\uB294, \uC9C0\uAE08\uC740 \uC544\uBB34\uB3C4 \uC54C\uC544\uBD10\uC8FC\uC9C0
+    \uBABB\uD558\uB294 \uAC80\uC774 \uB418\uC5C8\uB2E4."
