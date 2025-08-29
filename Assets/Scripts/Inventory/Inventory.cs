@@ -49,4 +49,23 @@ public class Inventory : SingletonMono<Inventory>
         EquippedDirectory = transform.GetChild(1).GetChild(0).GetChild(0).GetChild(index);
         EquippedDirectory.GetChild(0).GetChild(0).gameObject.SetActive(true);
     }
+
+    public void AddWeapon()
+    {
+        switch (Random.Range(0, 3))
+        {
+            case 0:
+                AddInventory(new Slot(ItemDB.Instance.Equipments[0], curInventorySize));
+                break;
+            case 1:
+                AddInventory(new Slot(ItemDB.Instance.Equipments[1], curInventorySize));
+                break;
+            case 2:
+                AddInventory(new Slot(ItemDB.Instance.Equipments[2], curInventorySize));
+                break;
+            default:
+                break;
+        }
+
+    }   
 }

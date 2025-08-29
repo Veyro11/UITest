@@ -32,8 +32,8 @@ class CharacterStatusChanger : MonoBehaviour
         if (Character != null)
         {
             //level
-            TextEditor.Instance.ChangeSlashText(transform.GetChild(1).GetChild(0).GetChild(0).GetComponent<TextMeshPro>(), Character.GetStatus(StatType.Exp).Basic,Character.GetStatus(StatType.NextExp).Basic);
-            transform.GetChild(1).GetChild(1).GetChild(1).GetComponent<Image>().GetComponent<RectTransform>().sizeDelta = new Vector2(300 * ((float)Character.GetStatus(StatType.Exp).Basic / Character.GetStatus(StatType.NextExp).Basic), 10);
+            TextEditor.Instance.ChangeSlashText(transform.GetChild(1).GetChild(1).GetChild(0).GetChild(0).GetComponent<TextMeshPro>(), Character.GetStatus(StatType.Exp).Basic,Character.GetStatus(StatType.NextExp).Basic);
+            transform.GetChild(1).GetChild(1).GetChild(0).GetComponent<Image>().GetComponent<RectTransform>().sizeDelta = new Vector2(300 * ((float)Character.GetStatus(StatType.Exp).Basic / Character.GetStatus(StatType.NextExp).Basic), 10);
             //HP, MP
             transform.GetChild(1).GetChild(2).GetChild(0).GetChild(0).GetComponent<Image>().GetComponent<RectTransform>().sizeDelta = new Vector2(300 * ((float)Character.GetStatus(StatType.HP).Basic / Character.GetStatus(StatType.MAXHP).Basic), 40);
             TextEditor.Instance.ChangeSlashText(transform.GetChild(1).GetChild(2).GetChild(0).GetChild(1).GetComponent<TextMeshPro>(), Character.GetStatus(StatType.HP).Basic, Character.GetStatus(StatType.MAXHP).Basic);

@@ -8,7 +8,6 @@ using Unity.VisualScripting;
 
 public class TextEditor : SingletonMono<TextEditor>
 {
-    [SerializeField] TMP_FontAsset[] fontAssets;
 
     // TODO: Add methods to change font color and text itself.
     // for this stat, I'll consider expandancy heavier than complexity.

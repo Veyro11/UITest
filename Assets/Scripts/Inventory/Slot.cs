@@ -10,4 +10,11 @@ public class Slot : MonoBehaviour
     public int SlotID;
     public Transform SlotDirectory;
 
+    public Slot(EquipmentStatus equipment, int id)
+    {
+        Equipment = equipment;
+        SlotID = id;
+        this.SlotDirectory = transform;
+    }
+
 }

@@ -22,7 +22,7 @@ public class CameraManager : SingletonMono<CameraManager>
 
     private void Start()
     {
-        SetCameraMode(CameraMode.Main);
+        SetCameraMode(0);
     }
     
     public CameraMode GetCurrentCameraMode()
@@ -30,9 +30,26 @@ public class CameraManager : SingletonMono<CameraManager>
         return currentMode;
     }
 
-    public void SetCameraMode(CameraMode Mode)
+    private CameraMode? IntConverter(int mode)
     {
+               switch (mode)
+        {
+            case 0:
+                return CameraMode.Main;
+            case 1:
+                return CameraMode.Inventory;
+            case 2:
+                return CameraMode.Status;
+            default:
+                return null;
+        }
+    }
+    public void SetCameraMode(int intMode)
+    {
+        CameraMode? Mode = IntConverter(intMode);
+        if (Mode != null) return;
         if (currentMode == Mode) return;
+        
         if (Mode == CameraMode.Main)
         {
             MainCameraRig.GetComponentInChildren<CinemachineVirtualCamera>().Priority = 10;
