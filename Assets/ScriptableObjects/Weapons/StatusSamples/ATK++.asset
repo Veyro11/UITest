@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 0
   Basic: 0
-  Add1: 0
-  Add2: 0
+  Add1: 9
+  Add2: 10

@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba024a1bc93597a46bbf0a458acb4163, type: 3}
   m_Name: PHP
   m_EditorClassIdentifier: 
-  type: 0
-  controller: 0
+  type: 4
   Basic: 1000
+  Add1: 0
+  Add2: 0

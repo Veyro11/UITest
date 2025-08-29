@@ -12,13 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 0}
   m_Name: Weapon2
   m_EditorClassIdentifier: Assembly-CSharp::EquipmentStatus
-  ATK: {fileID: 0}
-  DEF: {fileID: 0}
-  STR: {fileID: 0}
-  INT: {fileID: 0}
+  ATK: {fileID: 11400000, guid: 69613d5641493a342afecc1a154145e9, type: 2}
+  DEF: {fileID: 11400000, guid: 8dbc9817894a90e41b8fd96f92f38d46, type: 2}
+  STR: {fileID: 11400000, guid: 92485ba4eb0d6274e99cb1b7f5fbeba3, type: 2}
+  INT: {fileID: 11400000, guid: 6181d21fdc3879944829c28583c85957, type: 2}
   LUK: {fileID: 0}
-  CRIT: {fileID: 0}
-  SpriteImage: {fileID: 0}
-  EquipmentName: 
-  SubName: 
-  Description: 
+  CRIT: {fileID: 11400000, guid: d4cd9798e2bfb5e4785c85b695dae0a3, type: 2}
+  SpriteImage: {fileID: 21300000, guid: 896f3fa619ccae74d8ba70a719dfb9b4, type: 3}
+  EquipmentName: "\uD64D\uB828\uD654"
+  SubName: "\uC591\uC190\uAC80"
+  Description: "\uBD89\uC740 \uAC80\uC744 \uB4E4\uC5B4 \uB0B4\uB9AC\uCE58\uBA74 \uBB54\uAC00
+    \uAD49\uC7A5\uD55C \uC77C\uC774 \uC77C\uC5B4\uB0A0 \uB4EF \uD558\uB2E4."

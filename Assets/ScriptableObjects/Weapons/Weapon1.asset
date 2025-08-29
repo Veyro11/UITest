@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EquipmentStatus
   ATK: {fileID: 11400000, guid: 55cb33a923d5ad1478a5f7fefa2f4fa8, type: 2}
   DEF: {fileID: 11400000, guid: c86cb696dec8c13429759f6717d408e8, type: 2}
-  STR: {fileID: 11400000, guid: fe727c5d4f43e794bb15e9d87a54c9cd, type: 2}
+  STR: {fileID: 11400000, guid: 92485ba4eb0d6274e99cb1b7f5fbeba3, type: 2}
   INT: {fileID: 11400000, guid: 6181d21fdc3879944829c28583c85957, type: 2}
   LUK: {fileID: 11400000, guid: 2b9ccd79c33bead47be87e8f750162c5, type: 2}
   CRIT: {fileID: 11400000, guid: 01bebca456d8c56409cf9c6f38f263bb, type: 2}
